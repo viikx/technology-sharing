@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="awsm.min.css">
+  <title>fetch</title>
+</head>
+
+<body>
+  <p>
+    作为api调用者，获取资源算是一个常规操作。一个请求发出，一个响应回来，但是网络请求的底层实现是非常复杂的，过去没有一个统一的标准。
+  </p>
+
+  <ul>
+    <li> HTML中带有src属性的标签（img）</li>
+    <li> CSS中值为url(xxx)的属性 （background）</li>
+    <li> JS中的navigator .sendBeacon()</li>
+  </ul>
+  <p>他们都可以从网络中请求资源，但具体实现不统一，所以提出 Fetch 标准，同时在定义了 Fetch API，以较低的抽象层级，提供更多的网络能力供开发者使用。</p>
+
+
+  <!-- 绑定了 click 事件 -->
+  <button id="fetch">fetch</button>
+
+  <div id="show"></div>
+
+  <script type="module">
+    import FetchAPI from './fetch.js'
+
+    const dom = document.querySelector('#fetch')
+    dom.addEventListener('click', () => FetchAPI())
+  </script>
+</body>
+
+</html>
